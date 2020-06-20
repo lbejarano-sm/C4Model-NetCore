@@ -50,7 +50,7 @@ namespace C4Model
             contextView.PaperSize = PaperSize.A4_Landscape;
             contextView.AddAllSoftwareSystems();
             contextView.AddAllPeople();
-            contextView.EnableAutomaticLayout();
+            //contextView.EnableAutomaticLayout();
 
             Styles styles = viewSet.Configuration.Styles;
             styles.Add(new ElementStyle(Tags.Person) { Background = "#0a60ff", Color = "#ffffff", Shape = Shape.Person });
@@ -90,7 +90,7 @@ namespace C4Model
             ContainerView containerView = viewSet.CreateContainerView(internetBankingSystem, "Contenedor", "Diagrama de contenedores - Banking");
             contextView.PaperSize = PaperSize.A4_Landscape;
             containerView.AddAllElements();
-            containerView.EnableAutomaticLayout();
+            //containerView.EnableAutomaticLayout();
 
             // 3. Diagrama de Componentes
             Component transactionController = restApi.AddComponent("Transactions Controller", "Allows users to perform transactions.", "Spring Boot REST Controller");
@@ -111,7 +111,7 @@ namespace C4Model
             componentViewForRestApi.AddAllComponents();
             componentViewForRestApi.Add(cliente);
             componentViewForRestApi.Add(mainframeBankingSystem);
-            componentViewForRestApi.EnableAutomaticLayout();
+            //componentViewForRestApi.EnableAutomaticLayout();
 
             structurizrClient.UnlockWorkspace(workspaceId);
             structurizrClient.PutWorkspace(workspaceId, workspace);
